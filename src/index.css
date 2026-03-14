@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;700;800&display=swap");
+@import "tailwindcss";
+
+:root {
+  color-scheme: light;
+  --color-bg: #eef3f7;
+  --color-surface: rgba(255, 255, 255, 0.72);
+  --color-card: rgba(255, 255, 255, 0.6);
+  --color-card-hover: rgba(255, 255, 255, 0.82);
+  --color-card-strong: rgba(248, 250, 252, 0.92);
+  --color-border: rgba(52, 77, 103, 0.16);
+  --color-border-strong: rgba(52, 77, 103, 0.28);
+  --color-accent: #cc7a2f;
+  --color-accent-strong: #b5641d;
+  --color-accent-soft: rgba(204, 122, 47, 0.12);
+  --color-accent-border: rgba(204, 122, 47, 0.22);
+  --color-accent-deep: #884313;
+  --color-text: #142235;
+  --color-text-soft: #203a57;
+  --color-muted: #455d78;
+  --color-subtle: #6c8198;
+  --color-nav: rgba(245, 248, 251, 0.78);
+  --color-orb-one: rgba(98, 156, 196, 0.3);
+  --color-orb-two: rgba(224, 151, 83, 0.26);
+  --color-orb-three: rgba(109, 181, 153, 0.16);
+  --shadow-card: 0 24px 80px rgba(8, 20, 36, 0.12);
+  --font-sans: "DM Sans", "Segoe UI", sans-serif;
+  --font-display: "Sora", "DM Sans", sans-serif;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --color-bg: #09121b;
+  --color-surface: rgba(15, 24, 35, 0.7);
+  --color-card: rgba(12, 20, 31, 0.72);
+  --color-card-hover: rgba(21, 32, 47, 0.88);
+  --color-card-strong: rgba(15, 24, 35, 0.92);
+  --color-border: rgba(151, 182, 211, 0.16);
+  --color-border-strong: rgba(151, 182, 211, 0.3);
+  --color-accent: #f1a14a;
+  --color-accent-strong: #ffb869;
+  --color-accent-soft: rgba(241, 161, 74, 0.16);
+  --color-accent-border: rgba(241, 161, 74, 0.24);
+  --color-accent-deep: #ffd3a1;
+  --color-text: #e8f0f8;
+  --color-text-soft: #c6d7e7;
+  --color-muted: #9fb5ca;
+  --color-subtle: #7f98b1;
+  --color-nav: rgba(8, 16, 26, 0.8);
+  --color-orb-one: rgba(58, 119, 163, 0.36);
+  --color-orb-two: rgba(189, 104, 33, 0.28);
+  --color-orb-three: rgba(53, 131, 112, 0.2);
+  --shadow-card: 0 24px 80px rgba(0, 0, 0, 0.34);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  font-family: var(--font-sans);
+  background:
+    radial-gradient(circle at 16% 10%, var(--color-orb-one), transparent 30%),
+    radial-gradient(circle at 84% 18%, var(--color-orb-two), transparent 28%),
+    linear-gradient(180deg, color-mix(in srgb, var(--color-bg) 84%, white 16%) 0%, var(--color-bg) 100%);
+  color: var(--color-text);
+  transition:
+    background 0.5s ease,
+    color 0.3s ease;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(color-mix(in srgb, var(--color-text) 8%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in srgb, var(--color-text) 8%, transparent) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.16), transparent 60%);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+input,
+textarea {
+  color: var(--color-text);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--color-subtle);
+}
+
+#root {
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display);
+}
+
+::selection {
+  background: var(--color-accent-soft);
+  color: var(--color-text);
+}
+
+.orb-float {
+  animation: orbFloat 14s ease-in-out infinite;
+}
+
+.orb-float-delayed {
+  animation: orbFloat 18s ease-in-out infinite reverse;
+}
+
+.orb-float-slow {
+  animation: orbFloat 22s ease-in-out infinite;
+}
+
+.tech-badge {
+  box-shadow: var(--shadow-card);
+  opacity: 0.72;
+}
+
+@keyframes orbFloat {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(0, 18px, 0) scale(1.08);
+  }
+}
