@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 import Navbar from "./components/layout/Navbar.tsx";
 import BackgroundIllustrations from "./components/layout/BackgroundIllustrations.tsx";
@@ -55,6 +56,7 @@ function App() {
       <div className="app-footer relative z-10">
         <Footer />
       </div>
+      <SpeedInsights />
     </div>
   );
 }
