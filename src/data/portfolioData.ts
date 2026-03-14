@@ -23,6 +23,7 @@ export type ExperienceItem = {
 export type SkillGroupData = {
   title: string;
   items: string[];
+  badgeStyle?: "tech" | "plain";
 };
 
 export const navigation: NavItem[] = [
@@ -141,18 +142,22 @@ export const experience: ExperienceItem[] = [
 export const skillGroups: SkillGroupData[] = [
   {
     title: "Languages",
+    badgeStyle: "tech",
     items: ["Python", "Rust", "TypeScript", "JavaScript", "C++", "C#", "MATLAB", "SQL"],
   },
   {
     title: "Frameworks",
+    badgeStyle: "tech",
     items: ["React", "Node.js", "Electron", "Flask", "Django", "TailwindCSS"],
   },
   {
     title: "Databases",
+    badgeStyle: "tech",
     items: ["PostgreSQL", "SQLite", "Prisma", "Drizzle ORM"],
   },
   {
     title: "Tools",
+    badgeStyle: "tech",
     items: ["Git", "Docker", "CMake", "OpenSSL", "pytest", "Catch2", "Jupyter"],
   },
   {
