@@ -84,14 +84,14 @@ export const projects: Project[] = [
   {
     name: "SecureCrypto",
     summary:
-      "C++ security project that implements AES-256 encryption and decryption with OpenSSL, with an emphasis on correctness, key handling, and reliable file processing.",
+      "C++17 command-line security tool for protecting files and directory trees, designed around reliable encrypted storage and practical systems-level file handling.",
     impact:
-      "Demonstrates systems-level programming, applied cryptography fundamentals, and disciplined validation of security-sensitive behavior.",
+      "Shows systems-level security engineering through authenticated encryption, cross-platform build configuration, and thorough validation of security-sensitive file workflows.",
     stack: ["C++", "OpenSSL", "CMake", "Catch2"],
     bullets: [
-      "Implemented AES-256 encryption and decryption workflows in C++ using OpenSSL primitives for secure file handling.",
-      "Added key generation and derivation with PBKDF2, randomized salt generation, and proper AES padding to follow established secure development practices.",
-      "Covered edge cases such as large inputs and invalid keys with automated tests using Catch2.",
+      "Implemented authenticated file and directory encryption in C++17 with AES-256-GCM, randomized salt and nonce generation, and safe temporary-file handling during decryption.",
+      "Built Catch2 coverage for round-trip encryption, large and empty file streaming, recursive directory handling, wrong-password failures, tamper detection, and invalid input cases.",
+      "Configured cross-platform builds with CMake and added metadata inspection to improve reliability and usability across encryption and decryption workflows.",
     ],
     href: "https://github.com/jazicate/SecureCrypto",
   },
