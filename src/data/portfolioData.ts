@@ -70,56 +70,56 @@ export const projects: Project[] = [
   {
     name: "BatchGrade",
     summary:
-      "Cross-platform Electron desktop application for automating compilation, execution, and validation of student code submissions.",
+      "Collaborated on a team to develop the MVP of BatchGrade, a cross-platform Electron desktop application that automates compilation, execution, and validation of programming assignments.",
     impact:
-      "Designed to reduce grading turnaround time for programming assignments and make feedback delivery more consistent.",
+      "Reduced manual grading time by building an automated pipeline that processed 50+ submissions per assignment and persisted grading results in SQLite.",
     stack: ["Electron", "React", "TypeScript", "TailwindCSS", "Drizzle ORM", "SQLite", "Node.js", "Vitest"],
     bullets: [
-      "Built a React and TypeScript renderer with a secure Electron IPC architecture across main, preload, and renderer layers.",
-      "Designed the local persistence layer with Drizzle ORM and SQLite for grading workflow reliability.",
-      "Added unit tests with Vitest and an in-memory database to validate critical grading and persistence behavior.",
+      "Worked across the Electron application stack to help turn the initial MVP into a usable grading workflow for programming assignments.",
+      "Built the automated grading pipeline in MVP-2 and MVP-3, compiling and executing student code in an isolated environment, running instructor-defined test cases, validating outputs, and persisting results in SQLite.",
+      "Implemented unit tests with Vitest and an in-memory database to verify grading logic and ensure reliable submission processing.",
     ],
     href: "https://github.com/UNLV-CS472-672/2026-S-GROUP3-BatchGrade",
   },
   {
     name: "SecureCrypto",
     summary:
-      "C++ application implementing secure AES-256 encryption and decryption using OpenSSL.",
+      "C++ security project that implements AES-256 encryption and decryption with OpenSSL, with an emphasis on correctness, key handling, and reliable file processing.",
     impact:
-      "Demonstrates applied systems-level programming, security fundamentals, and disciplined testing practices.",
+      "Demonstrates systems-level programming, applied cryptography fundamentals, and disciplined validation of security-sensitive behavior.",
     stack: ["C++", "OpenSSL", "CMake", "Catch2"],
     bullets: [
-      "Implemented key generation and derivation with PBKDF2.",
-      "Handled edge cases including large inputs and invalid keys through automated tests.",
-      "Used randomized salt generation and proper AES padding to align with secure development practices.",
+      "Implemented AES-256 encryption and decryption workflows in C++ using OpenSSL primitives for secure file handling.",
+      "Added key generation and derivation with PBKDF2, randomized salt generation, and proper AES padding to follow established secure development practices.",
+      "Covered edge cases such as large inputs and invalid keys with automated tests using Catch2.",
     ],
     href: "https://github.com/jazicate/SecureCrypto",
   },
   {
     name: "Student Performance Prediction",
     summary:
-      "Machine learning project comparing predictive models for student performance classification.",
+      "Machine learning project focused on predicting student performance by comparing multiple classification models, tuning them systematically, and evaluating how each model generalizes.",
     impact:
-      "Reached 91.1% accuracy with Random Forest while demonstrating evaluation, tuning, and visualization workflows.",
+      "Reached 91.1% accuracy with Random Forest while building a full workflow for model comparison, hyperparameter tuning, and result communication.",
     stack: ["Python", "Scikit-learn", "Pandas", "Matplotlib", "Seaborn"],
     bullets: [
-      "Benchmarked Random Forest, KNN, and SVM models to compare classification performance.",
-      "Optimized KNN hyperparameters with GridSearchCV and improved recall to 94.2%.",
-      "Communicated outcomes with confusion matrices, ROC curves, and cross-validation visualizations.",
+      "Benchmarked Random Forest, KNN, and SVM models to compare classification accuracy, recall, and generalization behavior.",
+      "Optimized KNN hyperparameters with GridSearchCV and improved recall to 94.2% through systematic tuning.",
+      "Visualized model outcomes with confusion matrices, ROC curves, and cross-validation plots to make results easier to interpret.",
     ],
     href: "https://github.com/jazicate/StudentPerformancePrediction",
   },
   {
     name: "Iris Flower Classification",
     summary:
-      "Multi-class classification workflow built to evaluate model quality and communicate results clearly.",
+      "Multi-class classification project built around the Iris dataset to compare model behavior, improve weaker baselines, and communicate results with clear visual analysis.",
     impact:
-      "Achieved 100% test accuracy with Naive Bayes and Neural Network models while improving Logistic Regression through tuning.",
+      "Achieved 100% test accuracy with Naive Bayes and Neural Network models while improving Logistic Regression through targeted tuning.",
     stack: ["Python", "Scikit-learn", "Pandas", "Matplotlib", "Seaborn"],
     bullets: [
-      "Compared multiple models to understand tradeoffs in accuracy and log-loss.",
-      "Used GridSearchCV to improve Logistic Regression performance.",
-      "Built visual reports with confusion matrices, ROC curves, and pairplots.",
+      "Compared Naive Bayes, Neural Network, and Logistic Regression models to understand tradeoffs in accuracy and log-loss.",
+      "Used GridSearchCV to improve Logistic Regression performance and evaluate the impact of parameter choices.",
+      "Built visual reports with confusion matrices, ROC curves, and pairplots to clearly explain class separation and model quality.",
     ],
     href: "https://github.com/jazicate/IrisFlowerClassification",
   },
